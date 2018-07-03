@@ -1,8 +1,8 @@
 FROM jenkins/jnlp-slave:alpine
 
 USER root
-RUN apk add --no-cache docker nodejs
-RUN apk --update add git openssh \
+RUN apk add --no-cache docker nodejs python
+RUN apk --update add git openssh make \
   && rm -rf /var/lib/apt/lists/* \
   && rm /var/cache/apk/* 
 
